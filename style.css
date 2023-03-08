@@ -1,0 +1,48 @@
+body {
+  background-color: #222;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+h1, h2 {
+  color: #ffd700;
+  font-size: 6em;
+  margin: 0;
+  text-align: center;
+}
+
+#homepage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#homepage img {
+  width: 50px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  cursor: pointer;
+  animation: arrow-bounce 2s infinite;
+}
+
+#secondpage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
