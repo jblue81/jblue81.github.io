@@ -12,27 +12,27 @@ h1, h2 {
   text-align: center;
 }
 
-#homepage {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#homepage a {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#homepage img {
-  width: 50px;
-  margin: 0 auto;
-  display: block;
-  margin-top: 50px;
-  cursor: pointer;
-  animation: arrow-bounce 2s infinite;
+#homepage:target {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#homepage:target + #secondpage {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #secondpage {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 @keyframes arrow-bounce {
